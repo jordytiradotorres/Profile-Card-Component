@@ -1,0 +1,141 @@
+:root {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  --dark-cyan-color: hsl(185, 75%, 39%);
+  --very-dark-desaturated-blue: hsl(229, 23%, 23%);
+  --dark-grayish-blue: hsl(227, 10%, 46%);
+  --dark-gray: hsl(0, 0%, 59%);
+
+  --font-Kumbh-Sans: "Kumbh Sans", sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-Kumbh-Sans);
+  background-image: url(../images/bg-pattern-top.svg),
+    url(../images/bg-pattern-bottom.svg);
+  background-repeat: no-repeat;
+  background-position: -40vh -50vh, 49vw 56vh;
+  background-size: 500px;
+  background-color: var(--dark-cyan-color);
+}
+@media (min-width: 361px) and (max-width: 420px) {
+  body {
+    background-position: -36vh -22vh, 43vw 54vh;
+    background-size: 500px;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    background-position: -14vw -55vh, 49vw 56vh;
+    background-size: 800px;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin: 0;
+}
+
+figure {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  list-style-type: none;
+}
+
+ul li a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  min-width: 300px;
+  max-width: 400px;
+  border-radius: 10px;
+  font-size: 1.125rem;
+  padding-bottom: 1.5rem;
+}
+
+.card__profile {
+  height: 130px;
+  background-image: url(../images/bg-pattern-card.svg);
+  background-size: cover;
+  border-radius: 10px 10px 0 0;
+  padding-top: 5rem;
+}
+.card__profile img {
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+}
+.card__profile span {
+  font-weight: normal;
+  color: var(--dark-gray);
+}
+.card__profile h3 {
+  margin-top: 1.2rem;
+  font-weight: 700;
+  color: var(--very-dark-desaturated-blue);
+}
+.card__profile .city {
+  display: block;
+  color: var(--dark-grayish-blue);
+  margin-top: 0.75rem;
+  font-size: 1rem;
+  border-bottom: thin solid var(--dark-gray);
+  padding-bottom: 1.2rem;
+}
+
+.card__social {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding-top: 11rem;
+  color: var(--very-dark-desaturated-blue);
+  font-weight: 700;
+}
+.card__social small {
+  display: inline-block;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+  color: var(--dark-grayish-blue);
+  font-weight: 400;
+}
